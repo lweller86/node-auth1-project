@@ -30,11 +30,8 @@ function findById(user_id) {
   resolves to the newly inserted user { user_id, username }
  */
 async function add(user) {
-  return await db('user')
-  .insert(user)
-  .then(id => {
-    return findById(id[0])
-  })
+const [id] = await db('users').insert(user)
+return findById(id)
 
 }
 

@@ -35,8 +35,8 @@ server.use(session({
     sidfieldname: 'sid',
   }),
   cookie: {
-    maxAge: 100 * 60 * 10,
-    secure: true,
+    maxAge: 1000 * 60 * 10,
+    secure: false,
     httpOnly: true,
     //sameSite: 'none'
   }
